@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    /* More contrasting gradient background */
+    background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+    color: white;
+
+    /* Add wave-like animation */
+    background-size: 200% 200%;
+    animation: gradientWave 15s ease infinite, fadeIn 3s ease-in-out;
+}
+
+@keyframes gradientWave {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+#add-btn {
+    margin-top: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 10px, 15px;
+    font-size: 16px;
+    height: 40px;
+}
+
+#task-input {
+    padding: 10px 15px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 16px; /* Increase font size */
+    height: 25px; /* Increase input field height */
+ }
+
+#task-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+
+}
+
+#task-table th,
+#task-table td {
+    border-bottom: 1px solid white;
+    text-align: center;
+    /* Center the content */
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+}
+
+/* Button Styles */
+.edit-button,
+.delete-button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    /* Round buttons */
+    cursor: pointer;
+
+    transition-duration: .3s;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #2980b9;
+}
+
